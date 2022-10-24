@@ -33,6 +33,8 @@ class Scene1 extends Phaser.Scene {
             frameWidth: 16,
             frameHeight: 16
         });
+
+        this.load.bitmapFont("pixelFont", "assets/font/font.png", "assets/font/font.xml")
     }
 
     create() {
@@ -96,5 +98,9 @@ class Scene1 extends Phaser.Scene {
             frameRate: 20,
             repeat: -1
         })
+
+        this.score = 0;
+
+        this.scoreLabel = this.add.bitmapText(10, 5, "pixelFont", "SCORE: ", 16);
     }
 }
